@@ -6,15 +6,16 @@ public class BallMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private BallGrounded _ballGrounded;
-    [SerializeField] private ShotTrajectory _drawLine;
+    [SerializeField] private ShotTrajectory _trajectory;
 
-    [Header("Movement Properties")]
-    [SerializeField, Range(5, 15)] private float _maxDistance;
-
+    private const float _maxDistance = 9;
     private const float _rotationSpeed = 12;
     private const float _shootForce = 2f;
     private const float leftRotationDirection = -1f;
+
     private const KeyCode LMB = KeyCode.Mouse0;
+    private readonly Color WhiteColor = Color.white;
+    private readonly Color BlackColor = Color.black;
 
     private void OnValidate()
     {
@@ -22,8 +23,8 @@ public class BallMovement : MonoBehaviour
             _rb = GetComponent<Rigidbody2D>();
         if (_ballGrounded == null)
             _ballGrounded = GetComponent<BallGrounded>();
-        if (_drawLine == null)
-            _drawLine = GetComponent<ShotTrajectory>();
+        if (_trajectory == null)
+            _trajectory = GetComponent<ShotTrajectory>();
     }
 
     private void OnDrawGizmos()
@@ -47,20 +48,35 @@ public class BallMovement : MonoBehaviour
         if (Input.GetKeyUp(LMB))
         {
             _rb.AddForce(shootDirection * _shootForce, ForceMode2D.Impulse);
-            if (shootDirection.x > transform.position.x)
-                _rb.AddTorque(leftRotationDirection * _rotationSpeed);
-            else
-                _rb.AddTorque(_rotationSpeed);
+            Twist(shootDirection);
+            EventManager.InvokeTransferNewThrow();
         }
+    }
+
+    private void Twist(Vector2 shootDirection)
+    {
+        if (shootDirection.x > transform.position.x)
+            _rb.AddTorque(leftRotationDirection * _rotationSpeed);
+        else
+            _rb.AddTorque(_rotationSpeed);
     }
 
     private bool CanMouseInput()
     {
-        Debug.Log($"111 Distanse {Vector2.Distance(GetMouseWorldPosition(), transform.position)}");
+        //Debug.Log($"111 Distanse {Vector2.Distance(GetMouseWorldPosition(), transform.position)}");
 
-        if (!_ballGrounded.IsGrounded || GetMouseWorldPosition().y < transform.position.y || Vector2.Distance(GetMouseWorldPosition(), transform.position) > _maxDistance)
+        if (_ballGrounded.IsGrounded == false
+            || GetMouseWorldPosition().y < transform.position.y
+            || Vector2.Distance(GetMouseWorldPosition(), transform.position) > _maxDistance)
+        {
+            _trajectory.SetNewColor(BlackColor);
             return false;
-        else return true;
+        }
+        else
+        {
+            _trajectory.SetNewColor(WhiteColor);
+            return true;
+        }
     }
 
     private void DrawTrajectory(Vector2 shootDirection)
@@ -68,12 +84,12 @@ public class BallMovement : MonoBehaviour
         Vector2 objectSpeed = shootDirection * _shootForce;
         if (Input.GetKey(LMB) && _ballGrounded.IsGrounded)
         {
-            _drawLine.TrajectoryEnable();
-            _drawLine.Draw(transform.position, objectSpeed);
+            _trajectory.TrajectoryEnable();
+            _trajectory.Draw(transform.position, objectSpeed);
         }
 
         if (Input.GetKeyUp(LMB))
-            _drawLine.TrajectoryDisable();
+            _trajectory.TrajectoryDisable();
     }
 
     private Vector3 GetMouseWorldPosition()

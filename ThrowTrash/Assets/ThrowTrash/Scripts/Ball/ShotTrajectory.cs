@@ -5,9 +5,9 @@ public class ShotTrajectory : MonoBehaviour
 {
     [SerializeField] private LineRenderer _lineRenderer;
     [SerializeField] private BallGrounded _ballGrounded;
-    [SerializeField, Range(9, 15)] private float _maxDistance;
 
     private const int pointsCount = 12;
+    private const float _maxDistance = 9;
     private const float groundLevel = -5f;
 
     private void OnValidate()
@@ -53,7 +53,7 @@ public class ShotTrajectory : MonoBehaviour
         _lineRenderer.SetPositions(points);
     }
 
-    private void SetNewColor(Color newColor)
+    public void SetNewColor(Color newColor)
     {
         _lineRenderer.startColor = newColor;
         _lineRenderer.endColor = newColor;
