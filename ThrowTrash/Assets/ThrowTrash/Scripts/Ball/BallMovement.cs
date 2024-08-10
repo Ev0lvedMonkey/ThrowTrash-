@@ -35,7 +35,7 @@ public class BallMovement : MonoBehaviour
     private void Update()
     {
         Move(GetMouseWorldPosition() - transform.position);
-        ResetMove();
+        TestResetMove();
     }
 
     private void Move(Vector2 shootDirection)
@@ -97,7 +97,7 @@ public class BallMovement : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
-    private void ResetMove()
+    private void TestResetMove()
     {
         if (Input.GetKeyUp(KeyCode.Mouse1))
         {

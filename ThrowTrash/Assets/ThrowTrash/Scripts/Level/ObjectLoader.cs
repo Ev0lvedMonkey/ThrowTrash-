@@ -4,8 +4,10 @@ public abstract class ObjectLoader : MonoBehaviour
 {
     protected virtual void SpawnObject(string path, out GameObject currentObject, Vector3 spawnPosition)
     {
-        GameObject levelPrefab = Resources.Load<GameObject>(path);
-        currentObject = Instantiate(levelPrefab, spawnPosition, Quaternion.identity);
+        currentObject = Resources.Load<GameObject>(path);
+        if (currentObject == null)
+            return;
+        currentObject = Instantiate(currentObject, spawnPosition, Quaternion.identity);
     }
 
     protected virtual void RemoveObject(GameObject currentObject) 

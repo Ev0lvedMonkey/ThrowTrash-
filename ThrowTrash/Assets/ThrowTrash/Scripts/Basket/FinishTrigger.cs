@@ -8,7 +8,7 @@ public class FinishTrigger : MonoBehaviour
         if (collision.TryGetComponent(out BallMovement ball))
         {
             EventManager.InvokeOpenWinPopUp();
-            Debug.Log("Finish");
+            EventManager.InvokeUpdateCurrentLevel();
         }
     }
 }
