@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 
-
 public class WinPopUpLoader : ObjectLoader
 {
     private const string ResourcesLevelsListPath = "Prefabs/UiElements/FullParts/WinPopUp";
@@ -9,6 +8,7 @@ public class WinPopUpLoader : ObjectLoader
 
     private void Awake()
     {
+        //todo bootstrap
         Init();
     }
 

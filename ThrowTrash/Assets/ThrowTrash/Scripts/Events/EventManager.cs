@@ -8,6 +8,8 @@ public class EventManager : MonoBehaviour
     public static UnityEvent TransferNewThrowEvent = new();
     public static UnityEvent RestartLevelEvent = new();
     public static UnityEvent UpdateCurrentLevelNumberEvent = new();
+    public static UnityEvent LoadNextLevelEvent = new();
+    public static UnityEvent LastChanceEvent = new();
 
     //todo 
     public static UnityEvent OpenWinPopUpEvent = new();
@@ -26,8 +28,8 @@ public class EventManager : MonoBehaviour
         TransferNewThrowEvent.Invoke();
 
     public static void InvokeRestartLevel() =>
-        RestartLevelEvent.Invoke(); 
-    
+        RestartLevelEvent.Invoke();
+
     public static void InvokeUpdateCurrentLevel() =>
         UpdateCurrentLevelNumberEvent.Invoke();
 
@@ -36,11 +38,17 @@ public class EventManager : MonoBehaviour
 
     public static void InvokeCloseWinPopUp() =>
         CloseWinPopUpEvent.Invoke();
-    
+
+    public static void InvokeLastChance() =>
+        LastChanceEvent.Invoke();
+
     public static void InvokeOpenLevels() =>
         OpenLevelsListCanvasEvent.Invoke();
 
     public static void InvokeCloseLevels() =>
         CloseLevelsListCanvasEvent.Invoke();
+
+    public static void InvokeLoadNextLevel() =>
+        LoadNextLevelEvent.Invoke();
 
 }

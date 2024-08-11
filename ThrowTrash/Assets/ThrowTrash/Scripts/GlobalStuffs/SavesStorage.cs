@@ -8,19 +8,14 @@ public class SavesStorage : MonoBehaviour
     private const int TotalMaxLevel = 21;
     private const int MinLevelNumber = 1;
 
-
     public static int MaxLevelPP { get; private set; }
     public int MaxLevelYG { get; private set; }
 
-    private void Awake()
+    public void Init()
     {
-        Init();
-        InitSavedData();
-    }
-
-    private void Init()
-    {
+        //todo bootstrap
         EventManager.SaveLevelNumberEvent.AddListener(UpdateSavedData);
+        InitSavedData();
     }
 
     private void UpdateSavedData(int outLevelNumber)

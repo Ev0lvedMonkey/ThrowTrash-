@@ -11,11 +11,11 @@ public class UIButtonLevelChoice : MonoBehaviour
 
     private void OnValidate()
     {
-        if(_levelNubmer == null)
+        if (_levelNubmer == null)
             _levelNubmer = transform.GetChild(0).GetComponent<UITextImage>();
-        if(_blockImageObject == null)
+        if (_blockImageObject == null)
             _blockImageObject = transform.GetChild(1).gameObject;
-        if(_levelButton == null)
+        if (_levelButton == null)
             _levelButton = GetComponent<Button>();
     }
 
@@ -30,8 +30,8 @@ public class UIButtonLevelChoice : MonoBehaviour
 
     public void LoadLevel()
     {
-        DisableObject(_levelsGridCanvas.gameObject);
         EventManager.InvokeLoadLevel(_levelNubmer.GetLevelNumber());
+        EventManager.InvokeCloseLevels();
     }
 
     public void OpenAccessToLevel()
@@ -51,7 +51,7 @@ public class UIButtonLevelChoice : MonoBehaviour
         outObject.SetActive(true);
     }
 
-    private void DisableObject(GameObject outObject) 
+    private void DisableObject(GameObject outObject)
     {
         outObject.SetActive(false);
     }
@@ -61,7 +61,7 @@ public class UIButtonLevelChoice : MonoBehaviour
         _levelButton.interactable = true;
     }
 
-    private void DisableLevelButton() 
+    private void DisableLevelButton()
     {
         _levelButton.interactable = false;
     }

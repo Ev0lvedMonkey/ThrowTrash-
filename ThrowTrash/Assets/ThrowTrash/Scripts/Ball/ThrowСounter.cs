@@ -10,7 +10,7 @@ public class ThrowСounter : MonoBehaviour
             if (_throwСount >= MaxThrowСount)
             {
                 _throwСount = 0;
-                EventManager.InvokeRestartLevel();
+                EventManager.InvokeLastChance();
                 return _throwСount;
             }
             if (_throwСount < 0)
@@ -23,24 +23,11 @@ public class ThrowСounter : MonoBehaviour
         private set => _throwСount = value;
     }
 
-    [SerializeField] private LevelsLoader _levelsLoader;
-
     private const int MaxThrowСount = 3;
 
     private int _throwСount;
 
-    private void OnValidate()
-    {
-        if (_levelsLoader == null)
-            _levelsLoader = GetComponent<LevelsLoader>();
-    }
-
-    private void Awake()
-    {
-        Init();
-    }
-
-    private void Init()
+    public void Init()
     {
         EventManager.TransferNewThrowEvent.AddListener(AuthNewThrow);
     }

@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class LevelsListLoader : ObjectLoader
 {
-    private const string ResourcesLevelsListPath = "Prefabs/UiElements/FullParts";
+    private const string ResourcesLevelsListPath = "Prefabs/UiElements/FullParts/LevelsListCanvas";
 
     private GameObject _LevelsListCanvas;
 
     private void Awake()
     {
+        //todo bootstrap
         Init();
+    }
+
+    private void Start()
+    {
+        EventManager.InvokeOpenLevels();
     }
 
     private void Init()
