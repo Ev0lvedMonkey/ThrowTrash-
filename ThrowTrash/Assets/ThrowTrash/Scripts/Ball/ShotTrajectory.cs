@@ -6,7 +6,7 @@ public class ShotTrajectory : MonoBehaviour
     [SerializeField] private LineRenderer _lineRenderer;
     [SerializeField] private BallGrounded _ballGrounded;
 
-    private const int pointsCount = 12;
+    private const int pointsCount = 11;
     private const float _maxDistance = 9;
     private const float groundLevel = -5f;
 

@@ -8,7 +8,6 @@ namespace YG
     {
         public static string lang = "ru";
         public static Action<string> SwitchLangEvent;
-        private static bool switchLangEventToStart;
 
         [InitYG]
         public static void InitLang()
@@ -35,18 +34,8 @@ namespace YG
                 else if (Instance.infoYG.callingLanguageCheck == InfoYG.CallingLanguageCheck.FirstLaunchOnly)
                 {
                     lang = LoadKeyLang();
-                    switchLangEventToStart = true;
+                    SwitchLangEvent?.Invoke(lang);
                 }
-            }
-        }
-
-        [StartYG]
-        private static void StartLang()
-        {
-            if (switchLangEventToStart)
-            {
-                switchLangEventToStart = false;
-                SwitchLangEvent?.Invoke(lang);
             }
         }
 
@@ -95,7 +84,7 @@ namespace YG
             return PlayerPrefs.HasKey("langYG");
 #else
 #if PLATFORM_WEBGL
-            return LocalStorage.HasKey("langYG");
+            return HasKey("langYG");
 #else
             return PlayerPrefs.HasKey("langYG");
 #endif
@@ -108,7 +97,7 @@ namespace YG
             return PlayerPrefs.GetString("langYG");
 #else
 #if PLATFORM_WEBGL
-            return LocalStorage.GetKey("langYG");
+            return LoadFromLocalStorage("langYG");
 #else
             return PlayerPrefs.GetString("langYG");
 #endif
@@ -122,7 +111,7 @@ namespace YG
             PlayerPrefs.Save();
 #else
 #if PLATFORM_WEBGL
-            LocalStorage.SetKey("langYG", lang);
+            SaveToLocalStorage("langYG", lang);
 #else
             PlayerPrefs.SetString("langYG", lang);
             PlayerPrefs.Save();
@@ -282,11 +271,7 @@ namespace YG
 
             savesData.language = _lang;
             lang = _lang;
-
-            if (SDKEnabled)
-                SwitchLangEvent?.Invoke(_lang);
-            else
-                switchLangEventToStart = true;
+            SwitchLangEvent?.Invoke(_lang);
         }
     }
 }

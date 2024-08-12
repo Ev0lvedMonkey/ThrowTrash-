@@ -30,10 +30,17 @@ public class ThrowСounter : MonoBehaviour
     public void Init()
     {
         EventManager.TransferNewThrowEvent.AddListener(AuthNewThrow);
+        EventManager.LoadNextLevelEvent.AddListener(ResetThrowCount);
+        EventManager.RestartLevelEvent.AddListener(ResetThrowCount);
     }
 
     private void AuthNewThrow()
     {
         ThrowCount++;
+    }
+
+    private void ResetThrowCount()
+    {
+        ThrowCount = 0;
     }
 }

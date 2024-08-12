@@ -6,13 +6,7 @@ public class WinPopUpLoader : ObjectLoader
 
     private GameObject _popUpCanvas;
 
-    private void Awake()
-    {
-        //todo bootstrap
-        Init();
-    }
-
-    private void Init()
+    public void Init()
     {
         EventManager.OpenWinPopUpEvent.AddListener(SpawnCanvas);
         EventManager.CloseWinPopUpEvent.AddListener(RemoveCanvas);

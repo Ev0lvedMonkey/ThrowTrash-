@@ -51,7 +51,6 @@ public class LevelsLoader : ObjectLoader
 
     private void SaveNewMaxLevelNumber()
     {
-        //todo bootstrap
         EventManager.InvokeSaveLevel(_currentLevelNumber + 1);
     }
 }

@@ -35,8 +35,7 @@ function InitPlayer(sendback) {
                                 "playerAuth": "resolved",
                                 "playerName": playerName,
                                 "playerId": player.getUniqueID(),
-                                "playerPhoto": playerPhoto,
-                                "payingStatus": player.getPayingStatus()
+                                "playerPhoto": playerPhoto
                             };
                             if (sendback)
                                 myGameInstance.SendMessage('YandexGame', 'SetInitializationSDK', JSON.stringify(authJson));
@@ -63,8 +62,7 @@ function NotAuthorized() {
         "playerAuth": "rejected",
         "playerName": "unauthorized",
         "playerId": "unauthorized",
-        "playerPhoto": "unknown",
-        "payingStatus": player.getPayingStatus()
+        "playerPhoto": "null"
     };
     return JSON.stringify(authJson);
 }

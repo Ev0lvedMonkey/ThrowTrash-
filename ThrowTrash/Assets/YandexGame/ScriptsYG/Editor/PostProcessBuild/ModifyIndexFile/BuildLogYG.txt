@@ -1,2 +1,2 @@
-Build path: C:/Users/AMIR/Desktop/webbld
+Build path: C:/xampp/htdocs/Games/webbuild
 Build number: 1

@@ -8,7 +8,7 @@ using YG.Utils.Lang;
 
 namespace YG
 {
-    [DefaultExecutionOrder(-99), HelpURL("https://www.notion.so/PluginYG-d457b23eee604b7aa6076116aab647ed#7f075606f6c24091926fa3ad7ab59d10")]
+    [DefaultExecutionOrder(-101), HelpURL("https://www.notion.so/PluginYG-d457b23eee604b7aa6076116aab647ed#7f075606f6c24091926fa3ad7ab59d10")]
     public class LeaderboardYG : MonoBehaviour
     {
         [Tooltip("Техническое название соревновательной таблицы")]
@@ -42,11 +42,11 @@ namespace YG
 
         public enum PlayerPhoto
         { NonePhoto, Small, Medium, Large };
-        [Tooltip("Размер подгружаемых изображений игроков. NonePhoto = не подгружать изображение.")]
+        [Tooltip("Размер подгружаемых изображений игроков. NonePhoto = не подгружать изображение")]
         [ConditionallyVisible(nameof(advanced))]
         public PlayerPhoto playerPhoto = PlayerPhoto.Small;
 
-        [Tooltip("Использовать кастомный спрайт для отображения пользователей без аватаров.")]
+        [Tooltip("Использовать кастомный спрайт для отображения аваторок скрытых пользователей")]
         [ConditionallyVisible(nameof(advanced))]
         public Sprite isHiddenPlayerPhoto;
 
@@ -74,7 +74,7 @@ namespace YG
             else if (playerPhoto == PlayerPhoto.Large)
                 photoSize = "large";
 
-            if (updateLBMethod == UpdateLBMethod.Start)
+            if (updateLBMethod == UpdateLBMethod.Start && YandexGame.initializedLB)
             {
                 UpdateLB();
             }
@@ -84,7 +84,7 @@ namespace YG
         {
             YandexGame.onGetLeaderboard += OnUpdateLB;
 
-            if (updateLBMethod == UpdateLBMethod.OnEnable)
+            if (updateLBMethod == UpdateLBMethod.OnEnable && YandexGame.initializedLB)
             {
                 UpdateLB();
             }
@@ -92,13 +92,17 @@ namespace YG
 
         private void OnDisable() => YandexGame.onGetLeaderboard -= OnUpdateLB;
 
-        void OnUpdateLB(LBData lbData)
+        void OnUpdateLB(LBData lb)
         {
-            if (lbData.technoName == nameLB)
+            if (lb.entries == "initialized")
+            {
+                UpdateLB();
+            }
+            else if (lb.technoName == nameLB)
             {
                 string noData = "...";
 
-                if (lbData.entries == "no data")
+                if (lb.entries == "no data")
                 {
                     noData = YandexGame.savesData.language switch
                     {
@@ -110,14 +114,14 @@ namespace YG
                 }
                 if (!advanced)
                 {
-                    lbData.entries = lbData.entries.Replace("anonymous", LangMethods.IsHiddenTextTranslate(YandexGame.Instance.infoYG));
-                    entriesText.text = lbData.entries;
+                    lb.entries = lb.entries.Replace("anonymous", LangMethods.IsHiddenTextTranslate(YandexGame.Instance.infoYG));
+                    entriesText.text = lb.entries;
                 }
                 else
                 {
                     DestroyLBList();
 
-                    if (lbData.entries == "no data")
+                    if (lb.entries == "no data")
                     {
                         players = new LBPlayerDataYG[1];
                         GameObject playerObj = Instantiate(playerDataPrefab, rootSpawnPlayersData);
@@ -134,10 +138,7 @@ namespace YG
                     }
                     else
                     {
-#if UNITY_EDITOR
-                        lbData = LBMethods.SortLB(lbData, quantityTop, quantityAround, maxQuantityPlayers);
-#endif
-                        SpawnPlayersList(lbData);
+                        SpawnPlayersList(lb);
                     }
                 }
                 onUpdateData.Invoke();
@@ -197,9 +198,16 @@ namespace YG
 
                 if (playerPhoto != PlayerPhoto.NonePhoto)
                 {
-                    if (isHiddenPlayerPhoto && lb.players[i].photo.Contains("/avatar/0/"))
+                    if (lb.players[i].photo == "nonePhoto")
                     {
-                        players[i].data.photoSprite = isHiddenPlayerPhoto;
+                        if (isHiddenPlayerPhoto)
+                        {
+                            players[i].data.photoSprite = isHiddenPlayerPhoto;
+                        }
+                        else
+                        {
+                            players[i].data.photoUrl = null;
+                        }
                     }
                     else
                     {
@@ -216,7 +224,7 @@ namespace YG
             YandexGame.GetLeaderboard(nameLB, maxQuantityPlayers, quantityTop, quantityAround, photoSize);
         }
 
-        public void NewScore(long score) => YandexGame.NewLeaderboardScores(nameLB, score);
+        public void NewScore(int score) => YandexGame.NewLeaderboardScores(nameLB, score);
 
         public void NewScoreTimeConvert(float score) => YandexGame.NewLBScoreTimeConvert(nameLB, score);
 

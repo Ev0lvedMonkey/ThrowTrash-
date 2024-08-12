@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using YG;
 
@@ -16,6 +15,11 @@ public class SavesStorage : MonoBehaviour
         //todo bootstrap
         EventManager.SaveLevelNumberEvent.AddListener(UpdateSavedData);
         InitSavedData();
+    }
+
+    public static int GetTotalMaxLevel()
+    {
+        return TotalMaxLevel;
     }
 
     private void UpdateSavedData(int outLevelNumber)
