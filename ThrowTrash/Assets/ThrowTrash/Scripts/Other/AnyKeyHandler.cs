@@ -1,18 +1,13 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AnyKeyHandler : MonoBehaviour
 {
-    [SerializeField] private SceneLoader _sceneLoader;
-
-    private void OnValidate()
-    {
-        if(_sceneLoader == null)
-            _sceneLoader = GetComponent<SceneLoader>();
-    }
+    [SerializeField] private UnityEvent OnKeyPressed;
 
     private void Update()
     {
         if (Input.anyKeyDown)
-            _sceneLoader.LoadNewScene();
+            OnKeyPressed.Invoke();
     }
 }

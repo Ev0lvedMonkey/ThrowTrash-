@@ -35,7 +35,6 @@ public class BallMovement : MonoBehaviour
     private void Update()
     {
         Move(GetMouseWorldPosition() - transform.position);
-        TestResetMove();
     }
 
     private void Move(Vector2 shootDirection)
@@ -95,15 +94,5 @@ public class BallMovement : MonoBehaviour
     private Vector3 GetMouseWorldPosition()
     {
         return Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    }
-
-    private void TestResetMove()
-    {
-        if (Input.GetKeyUp(KeyCode.Mouse1))
-        {
-            gameObject.SetActive(false);
-            transform.position = new Vector3(-6.07f, -3.79f, 0);
-            gameObject.SetActive(true);
-        }
     }
 }

@@ -23,7 +23,7 @@ public class ThrowСounter : MonoBehaviour
         private set => _throwСount = value;
     }
 
-    private const int MaxThrowСount = 3;
+    private const int MaxThrowСount = 2;
 
     private int _throwСount;
 

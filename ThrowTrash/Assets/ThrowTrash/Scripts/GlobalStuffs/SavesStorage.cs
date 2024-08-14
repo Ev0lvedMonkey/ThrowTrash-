@@ -17,6 +17,16 @@ public class SavesStorage : MonoBehaviour
         InitSavedData();
     }
 
+    private void OnEnable()
+    {
+        YandexGame.GetDataEvent += InitSavedData;   
+    }
+
+    private void OnDisable()
+    {
+        YandexGame.GetDataEvent -= InitSavedData;   
+    }
+
     public static int GetTotalMaxLevel()
     {
         return TotalMaxLevel;
@@ -31,6 +41,7 @@ public class SavesStorage : MonoBehaviour
 
         MaxLevelPP = outLevelNumber;
         MaxLevelYG = MaxLevelPP;
+        YandexGame.savesData.maxLevelNumber = MaxLevelYG;
         PlayerPrefs.SetInt(LevelsNumber, MaxLevelPP);
     }
 

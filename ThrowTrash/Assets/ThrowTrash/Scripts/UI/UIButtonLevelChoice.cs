@@ -21,7 +21,6 @@ public class UIButtonLevelChoice : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log($"{SavesStorage.MaxLevelPP}");
         if (SavesStorage.MaxLevelPP < _levelNubmer.GetLevelNumber())
             CloseAccessToLevel();
         else

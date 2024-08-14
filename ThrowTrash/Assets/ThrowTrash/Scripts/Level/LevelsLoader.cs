@@ -1,4 +1,5 @@
 using UnityEngine;
+using YG;
 
 public class LevelsLoader : ObjectLoader
 {
@@ -45,8 +46,8 @@ public class LevelsLoader : ObjectLoader
         RemoveObject(_currentLevel);
         _currentLevelNumber++;
         string fullLevelPath = ResourcesLevelPath + _currentLevelNumber;
-        Debug.Log(fullLevelPath);
         SpawnObject(fullLevelPath, out _currentLevel, SpawnPoint);
+        YandexGame.FullscreenShow();
     }
 
     private void SaveNewMaxLevelNumber()

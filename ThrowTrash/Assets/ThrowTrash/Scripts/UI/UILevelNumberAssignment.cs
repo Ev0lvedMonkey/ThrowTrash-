@@ -12,7 +12,6 @@ public class UILevelNumberAssignment : MonoBehaviour
             UpdateList();
     }
 
-
     private void UpdateList()
     {
         _levelsList.Clear();

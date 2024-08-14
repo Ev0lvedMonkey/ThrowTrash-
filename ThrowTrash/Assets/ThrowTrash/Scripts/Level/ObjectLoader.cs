@@ -6,7 +6,10 @@ public abstract class ObjectLoader : MonoBehaviour
     {
         currentObject = Resources.Load<GameObject>(path);
         if (currentObject == null)
+        {
+            Debug.LogError($"Object not load\nPath {path}");
             return;
+        }
         currentObject = Instantiate(currentObject, spawnPosition, Quaternion.identity);
     }
 

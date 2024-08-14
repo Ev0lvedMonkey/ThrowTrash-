@@ -310,7 +310,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.35
+  m_fontSize: 28.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -390,7 +390,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b6cc27e20ca6b409ace543158229d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneLoader: {fileID: 317282753}
+  OnKeyPressed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 317282753}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadNewScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &317282752
 Transform:
   m_ObjectHideFlags: 0
@@ -429,7 +443,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2211564899198745196, guid: caf9732433f4dc044845763962493607, type: 3}
       propertyPath: singleton
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2211564899198745197, guid: caf9732433f4dc044845763962493607, type: 3}
       propertyPath: m_Name
@@ -626,8 +640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4333a6c127e7c5b4ba235700eca4dd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enText: {fileID: 1364913235}
-  _ruText: {fileID: 234893657}
+  RuText: {fileID: 234893657}
+  EnText: {fileID: 1364913235}
 --- !u!1 &771331365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1632,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.85
+  m_fontSize: 21
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1719,8 +1733,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4333a6c127e7c5b4ba235700eca4dd14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enText: {fileID: 1106555260}
-  _ruText: {fileID: 1777036192}
+  RuText: {fileID: 1777036192}
+  EnText: {fileID: 1106555260}
 --- !u!222 &1812291156
 CanvasRenderer:
   m_ObjectHideFlags: 0
