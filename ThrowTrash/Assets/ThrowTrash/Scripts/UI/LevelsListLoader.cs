@@ -6,15 +6,12 @@ public class LevelsListLoader : ObjectLoader
 
     private GameObject _LevelsListCanvas;
 
-    private void Start()
-    {
-        EventManager.InvokeOpenLevels();
-    }
-
     public void Init()
     {
         EventManager.OpenLevelsListCanvasEvent.AddListener(SpawnCanvas);
         EventManager.CloseLevelsListCanvasEvent.AddListener(RemoveCanvas);
+        EventManager.InvokeOpenLevels();
+        Debug.Log($"Levels List init");
     }
 
     private void SpawnCanvas()

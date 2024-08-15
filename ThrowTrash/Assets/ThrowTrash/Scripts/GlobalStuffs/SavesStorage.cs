@@ -15,6 +15,7 @@ public class SavesStorage : MonoBehaviour
         //todo bootstrap
         EventManager.SaveLevelNumberEvent.AddListener(UpdateSavedData);
         InitSavedData();
+        Debug.Log($"save storage init");
     }
 
     private void OnEnable()
@@ -42,6 +43,7 @@ public class SavesStorage : MonoBehaviour
         MaxLevelPP = outLevelNumber;
         MaxLevelYG = MaxLevelPP;
         YandexGame.savesData.maxLevelNumber = MaxLevelYG;
+        YandexGame.SaveProgress();
         PlayerPrefs.SetInt(LevelsNumber, MaxLevelPP);
     }
 
@@ -53,9 +55,12 @@ public class SavesStorage : MonoBehaviour
 
         MaxLevelYG = YandexGame.savesData.maxLevelNumber;
 
+        Debug.Log($"{MaxLevelPP} || {MaxLevelYG}");
+
         int bestScore = Mathf.Max(MaxLevelYG, MaxLevelPP);
 
         MaxLevelYG = bestScore;
         MaxLevelPP = bestScore;
+        Debug.Log($"After {MaxLevelPP} || {MaxLevelYG}");
     }
 }
