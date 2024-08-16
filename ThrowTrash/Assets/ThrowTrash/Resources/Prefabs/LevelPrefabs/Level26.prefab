@@ -805,7 +805,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5177285067967855, guid: 044ceb243237813428507963c4a0826a, type: 3}
       propertyPath: _isLastFinish
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5177285067967855, guid: 044ceb243237813428507963c4a0826a, type: 3}
       propertyPath: OnTrigger.m_PersistentCalls.m_Calls.Array.size

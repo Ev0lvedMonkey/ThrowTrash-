@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using YG;
 
 public class EventManager : MonoBehaviour
 {
@@ -27,8 +28,11 @@ public class EventManager : MonoBehaviour
     public static void InvokeTransferNewThrow() =>
         TransferNewThrowEvent.Invoke();
 
-    public static void InvokeRestartLevel() =>
+    public static void InvokeRestartLevel()
+    {
         RestartLevelEvent.Invoke();
+        YandexGame.FullscreenShow();
+    }
 
     public static void InvokeUpdateCurrentLevel() =>
         UpdateCurrentLevelNumberEvent.Invoke();
@@ -50,5 +54,4 @@ public class EventManager : MonoBehaviour
 
     public static void InvokeLoadNextLevel() =>
         LoadNextLevelEvent.Invoke();
-
 }

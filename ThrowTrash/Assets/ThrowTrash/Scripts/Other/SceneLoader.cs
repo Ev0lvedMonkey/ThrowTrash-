@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField] private ScenesCollection selectedScene;
 
-    public void LoadNewScene() =>
+    public void LoadNewScene()
+    {
         SceneManager.LoadScene(selectedScene.ToString());
+        YandexGame.FullscreenShow();
+    }
 
 }
