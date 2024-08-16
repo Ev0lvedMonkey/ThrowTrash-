@@ -4,10 +4,10 @@ public class RotateObject : MonoBehaviour
 {
     private enum RotateDirection { Right, Left }
 
-    [SerializeField, Range(0.5f,5)] private float _rotateSpeed;
+    [SerializeField, Range(0.5f,10)] private float _rotateSpeed;
     [SerializeField] private RotateDirection _direction;
 
-    private void Update()
+    private void FixedUpdate()
     {
         Rotate();
     }

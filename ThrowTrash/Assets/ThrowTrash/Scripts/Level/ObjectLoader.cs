@@ -15,7 +15,7 @@ public abstract class ObjectLoader : MonoBehaviour
 
     protected virtual void RemoveObject(GameObject currentObject) 
     {
-        Destroy(currentObject.gameObject);
+        Destroy(currentObject?.gameObject);
         Resources.UnloadUnusedAssets();
     }
 }

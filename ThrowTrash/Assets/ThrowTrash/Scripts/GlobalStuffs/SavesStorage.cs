@@ -4,7 +4,7 @@ using YG;
 public class SavesStorage : MonoBehaviour
 {
     private const string LevelsNumber = "LevelsNumber";
-    private const int TotalMaxLevel = 21;
+    private const int TotalMaxLevel = 26;
     private const int MinLevelNumber = 1;
 
     public static int MaxLevelPP { get; private set; }

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c1ed3aed04434419e6bcc519a112a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _trasnlater: {fileID: 3430666775093567611}
+  _translater: {fileID: 3430666775093567611}
   _ruText: {fileID: 5452410026230578115}
   _enText: {fileID: 3874902119700581225}
 --- !u!1 &4611114095366855161
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.45
+  m_fontSize: 30.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.45
+  m_fontSize: 30.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
