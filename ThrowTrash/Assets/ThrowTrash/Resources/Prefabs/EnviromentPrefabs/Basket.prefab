@@ -224,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4784618143130175013}
   - component: {fileID: 941194910442402139}
+  - component: {fileID: 5435971081494132768}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Untagged
@@ -303,6 +304,23 @@ PolygonCollider2D:
       - {x: 0.69238293, y: -1.0879433}
       - {x: 1.1038136, y: 0.99021333}
   m_UseDelaunayMesh: 0
+--- !u!114 &5435971081494132768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667415862881798718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4d0a38ad0de20d4b8f9f53073db3de2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyCode: 27
+  _onKeyDown:
+    m_PersistentCalls:
+      m_Calls: []
+  _useEvent: 0
 --- !u!1 &4711338246702021875
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,9 +925,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _isLastFinish: 0
-  OnTrigger:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!60 &7835548457024842044
 PolygonCollider2D:
   m_ObjectHideFlags: 0

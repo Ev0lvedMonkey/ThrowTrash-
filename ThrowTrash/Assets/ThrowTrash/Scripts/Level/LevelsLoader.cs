@@ -25,6 +25,7 @@ public class LevelsLoader : ObjectLoader
         EventManager.RestartLevelEvent.AddListener(RestartLevel);
         EventManager.UpdateCurrentLevelNumberEvent.AddListener(SaveNewMaxLevelNumber);
         EventManager.LoadNextLevelEvent.AddListener(LoadNextLevel);
+        DialogManager.ShowDialog<LevelsListDialog>();
     }
 
     private void LoadLevel(int levelNumber)

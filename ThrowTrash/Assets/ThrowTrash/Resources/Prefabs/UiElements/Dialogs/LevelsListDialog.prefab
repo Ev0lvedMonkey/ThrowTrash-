@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 8568969939255279124}
   _levelButton: {fileID: 1369647154911698639}
   _blockImageObject: {fileID: 7246076448382226872}
@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 5568366403672824193}
   _levelButton: {fileID: 6976748625736654010}
   _blockImageObject: {fileID: 4552806118409463871}
@@ -1475,7 +1475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 6648286614804460582}
   _levelButton: {fileID: 1130294403151935821}
   _blockImageObject: {fileID: 7199695828568505130}
@@ -1906,7 +1906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 9035159087383964129}
   _levelButton: {fileID: 5584651545967423581}
   _blockImageObject: {fileID: 4612773866459021924}
@@ -2057,7 +2057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 1899160858455907747}
   _levelButton: {fileID: 4469306849489419748}
   _blockImageObject: {fileID: 6657847228099725549}
@@ -2451,7 +2451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 6701170979563267898}
   _levelButton: {fileID: 3073397980922375331}
   _blockImageObject: {fileID: 722423937323112819}
@@ -2602,7 +2602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 9164349793484908960}
   _levelButton: {fileID: 7382143437020075356}
   _blockImageObject: {fileID: 2812217330052294442}
@@ -2978,7 +2978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 8300902421697052370}
   _levelButton: {fileID: 1536999064279159350}
   _blockImageObject: {fileID: 20483221768991636}
@@ -3503,7 +3503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 7511540475092395877}
   _levelButton: {fileID: 8335162806707300346}
   _blockImageObject: {fileID: 4833875756215784875}
@@ -3654,7 +3654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 2191198954444413116}
   _levelButton: {fileID: 6613309406214592254}
   _blockImageObject: {fileID: 3578928433187774147}
@@ -4656,7 +4656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 8000810497434270886}
   _levelButton: {fileID: 9038487910077612158}
   _blockImageObject: {fileID: 6190355271283619141}
@@ -5068,7 +5068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 2484321446766276094}
   _levelButton: {fileID: 8651292157882910244}
   _blockImageObject: {fileID: 587539240025246644}
@@ -5331,7 +5331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 922886580491363394}
   _levelButton: {fileID: 3158293040884572754}
   _blockImageObject: {fileID: 5600074588957429867}
@@ -5482,7 +5482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 7985367831208894800}
   _levelButton: {fileID: 5875829928127892483}
   _blockImageObject: {fileID: 7621394153565232851}
@@ -6116,7 +6116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 4418850506814871424}
   _levelButton: {fileID: 6998427753838046249}
   _blockImageObject: {fileID: 4380395097469745004}
@@ -6342,7 +6342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 4413912076933301243}
   _levelButton: {fileID: 7192499578002726224}
   _blockImageObject: {fileID: 426808242042731976}
@@ -6713,7 +6713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 8651871490601940028}
   _levelButton: {fileID: 5217930319186730926}
   _blockImageObject: {fileID: 2012823159057900842}
@@ -7761,7 +7761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 763201159011081294}
   _levelButton: {fileID: 142644746423086604}
   _blockImageObject: {fileID: 6880288196834865636}
@@ -8191,7 +8191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 5236342006216781099}
   _levelButton: {fileID: 8063859275259438176}
   _blockImageObject: {fileID: 416496435783236715}
@@ -8417,7 +8417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 4023663557050923039}
   _levelButton: {fileID: 7893358776854444021}
   _blockImageObject: {fileID: 294758803517592972}
@@ -8433,8 +8433,9 @@ GameObject:
   - component: {fileID: 6853570368166909453}
   - component: {fileID: 4304786751847073435}
   - component: {fileID: 48826128807838268}
+  - component: {fileID: 7404695696529915706}
   m_Layer: 5
-  m_Name: LevelsListCanvas
+  m_Name: LevelsListDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8526,6 +8527,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7404695696529915706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5811391246294552011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6904ca1a8c5a8fe44b7fffcef11576ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _homeButton: {fileID: 5661100370174187642}
 --- !u!1 &5877553639311256075
 GameObject:
   m_ObjectHideFlags: 0
@@ -8897,7 +8911,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 1596667311575899476}
   _levelButton: {fileID: 6538624088463068470}
   _blockImageObject: {fileID: 5884264990445155209}
@@ -9366,7 +9380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 5422021132100246076}
   _levelButton: {fileID: 1050881360442490770}
   _blockImageObject: {fileID: 2839657902869396986}
@@ -9984,7 +9998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 496764498123787852}
   _levelButton: {fileID: 7439034094266510211}
   _blockImageObject: {fileID: 8584394355521472105}
@@ -10135,7 +10149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 7967439465090071077}
   _levelButton: {fileID: 2369963547060902444}
   _blockImageObject: {fileID: 5240753402230808659}
@@ -10789,7 +10803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 8211779955594732856}
   _levelButton: {fileID: 8602456495230546748}
   _blockImageObject: {fileID: 1178056240142672062}
@@ -11258,7 +11272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 6367811491870972930}
   _levelButton: {fileID: 1605718931103036863}
   _blockImageObject: {fileID: 2841738819801453573}
@@ -11951,7 +11965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 4281084084985664114}
   _levelButton: {fileID: 3192484961552472431}
   _blockImageObject: {fileID: 2276540627654656417}
@@ -12364,7 +12378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d3474147544b84d896dc5099d3f32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelsGridCanvas: {fileID: 6853570368166909453}
+  _levelsListDialog: {fileID: 7404695696529915706}
   _levelNubmer: {fileID: 7659137096543756657}
   _levelButton: {fileID: 1692665656872081825}
   _blockImageObject: {fileID: 5583208234023088377}
@@ -12794,16 +12808,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802935850502379167, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 802935850502379167, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 802935850502379167, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 768069060737753466}
     - target: {fileID: 802935850502379167, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -12832,31 +12842,21 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 4823557017205217176, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4179844560521667624, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 768069060737753466}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
 --- !u!224 &5004431035171831388 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 56174800998314169, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
   m_PrefabInstance: {fileID: 5022882665885224677}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &9202287078156561101 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4179844560521667624, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
+--- !u!114 &5661100370174187642 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 802935850502379167, guid: 99b6c29f3f580ac4a99cb3ed2851da0b, type: 3}
   m_PrefabInstance: {fileID: 5022882665885224677}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &768069060737753466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9202287078156561101}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f9faea4bf3220c4e98b615bd1842ad4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedScene: 0

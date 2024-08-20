@@ -23,11 +23,6 @@ public class ShotTrajectory : MonoBehaviour
         _lineRenderer.enabled = true;
     }
 
-    private void Update()
-    {
-        //Debug.Log($"{_lineRenderer.enabled}");
-    }
-
     public void TrajectoryDisable()
     {
         _lineRenderer.enabled = false;

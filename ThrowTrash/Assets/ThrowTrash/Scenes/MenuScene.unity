@@ -310,7 +310,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.95
+  m_fontSize: 28.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -370,7 +370,6 @@ GameObject:
   m_Component:
   - component: {fileID: 317282752}
   - component: {fileID: 317282751}
-  - component: {fileID: 317282753}
   m_Layer: 0
   m_Name: KeyBoardInputHandler
   m_TagString: Untagged
@@ -390,21 +389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b6cc27e20ca6b409ace543158229d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnAnyKeyPressed:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 317282753}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadNewScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &317282752
 Transform:
   m_ObjectHideFlags: 0
@@ -420,19 +404,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &317282753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317282750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f9faea4bf3220c4e98b615bd1842ad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedScene: 1
 --- !u!1001 &370870660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1632,7 +1603,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 21.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

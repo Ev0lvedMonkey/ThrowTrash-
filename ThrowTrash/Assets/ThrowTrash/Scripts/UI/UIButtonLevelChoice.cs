@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class UIButtonLevelChoice : MonoBehaviour
 {
-    [SerializeField] private Canvas _levelsGridCanvas;
+    [SerializeField] private LevelsListDialog _levelsListDialog;
 
     [SerializeField] private UITextImage _levelNubmer;
     [SerializeField] private Button _levelButton;
@@ -30,7 +30,7 @@ public class UIButtonLevelChoice : MonoBehaviour
     public void LoadLevel()
     {
         EventManager.InvokeLoadLevel(_levelNubmer.GetLevelNumber());
-        EventManager.InvokeCloseLevels();
+        _levelsListDialog.Hide();
     }
 
     public void OpenAccessToLevel()

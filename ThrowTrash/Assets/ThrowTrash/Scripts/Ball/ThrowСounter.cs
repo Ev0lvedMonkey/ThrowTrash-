@@ -3,6 +3,8 @@ using UnityEngine;
 [RequireComponent(typeof(LevelsLoader))]
 public class ThrowСounter : MonoBehaviour
 {
+    private int _throwСount;
+
     public int ThrowCount
     {
         get
@@ -24,8 +26,6 @@ public class ThrowСounter : MonoBehaviour
     }
 
     private const int MaxThrowСount = 2;
-
-    private int _throwСount;
 
     public void Init()
     {
