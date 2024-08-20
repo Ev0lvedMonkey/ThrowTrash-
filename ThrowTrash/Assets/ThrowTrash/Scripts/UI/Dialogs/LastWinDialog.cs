@@ -7,6 +7,7 @@ public class LastWinDialog : Dialog, ISinglRepresentative
     private void Awake()
     {
         UseSinglRepresentative();
+        base.InitButtonsLiseners();
     }
 
     public void UseSinglRepresentative()
