@@ -1,6 +1,6 @@
 public class LevelsListDialog : Dialog
 {
-    public void Hide()
+    public void HideDialog()
     {
         base.Hide();
     }

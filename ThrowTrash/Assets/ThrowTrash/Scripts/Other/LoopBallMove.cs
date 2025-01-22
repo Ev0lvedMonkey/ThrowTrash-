@@ -9,19 +9,32 @@ public class LoopBallMove : MonoBehaviour
     [SerializeField] private float _durationTime;
     [SerializeField] private float _force;
 
+    private Sequence _sequence;
+
     private void OnEnable()
     {
         Run();
     }
 
+    private void OnDisable()
+    {
+        StopRun();
+    }
+
     private void Run()
     {
-        Sequence sequence = DOTween.Sequence();
+        _sequence = DOTween.Sequence();
 
         foreach (var item in _shotPositions)
-            sequence.Append(CreateJumpTween(item.position));
+            _sequence.Append(CreateJumpTween(item.position));
 
-        sequence.SetLoops(-1);
+        _sequence.SetLoops(-1);
+    }
+
+    private void StopRun()
+    {
+        _sequence?.Kill(); 
+        _sequence = null;
     }
 
     private Tween CreateJumpTween(Vector3 position)
@@ -32,6 +45,8 @@ public class LoopBallMove : MonoBehaviour
 
     private void Rotate(Vector3 targetPosition)
     {
+        if (_trash == null)
+            return;
         Vector3 direction = (targetPosition - _trash.transform.position).normalized;
 
         float rotationDirection = direction.x > 0 ? 180f : -180f;

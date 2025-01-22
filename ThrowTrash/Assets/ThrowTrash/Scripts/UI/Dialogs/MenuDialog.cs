@@ -11,15 +11,15 @@ public class MenuDialog : Dialog, ISinglRepresentative
     private void Awake()
     {
         UseSinglRepresentative();
-        InitButtonsLiseners();
+        InitDialogButtonsLiseners();
     }
 
-    public void Hide()
+    public void HideDialog()
     {
         base.Hide();
     }
 
-    protected void InitButtonsLiseners()
+    protected void InitDialogButtonsLiseners()
     {
         base.InitButtonsLiseners();
         _menuIcon?.onClick.AddListener(() =>
@@ -29,7 +29,7 @@ public class MenuDialog : Dialog, ISinglRepresentative
         _restartIcon?.onClick.AddListener(() => 
         {
             EventManager.InvokeRestartLevel();
-            Hide();
+            HideDialog();
         });
     }
 
@@ -42,7 +42,7 @@ public class MenuDialog : Dialog, ISinglRepresentative
         }
         else
         {
-            Hide();
+            HideDialog();
             Debug.Log($"Destroed after instance {this.name}");
         }
     }

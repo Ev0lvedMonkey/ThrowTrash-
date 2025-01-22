@@ -11,10 +11,10 @@ public class WinDialog : Dialog, ISinglRepresentative
     private void Awake()
     {
         UseSinglRepresentative();
-        InitButtonsLiseners();
+        InitDialogButtonsLiseners();
     }
 
-    protected void InitButtonsLiseners()
+    protected void InitDialogButtonsLiseners()
     {
         base.InitButtonsLiseners();
         _loadNewLevelButton?.onClick.AddListener(() =>

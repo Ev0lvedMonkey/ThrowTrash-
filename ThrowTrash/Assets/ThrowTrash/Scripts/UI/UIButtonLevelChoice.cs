@@ -30,7 +30,7 @@ public class UIButtonLevelChoice : MonoBehaviour
     public void LoadLevel()
     {
         EventManager.InvokeLoadLevel(_levelNubmer.GetLevelNumber());
-        _levelsListDialog.Hide();
+        _levelsListDialog.HideDialog();
     }
 
     public void OpenAccessToLevel()
